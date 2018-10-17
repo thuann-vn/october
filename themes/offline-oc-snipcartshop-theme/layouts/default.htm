@@ -1,0 +1,46 @@
+[localePicker]
+forceUrl = 1
+
+[snipcartDependencies]
+includeJquery = 1
+
+[currencyPicker]
+
+[menu]
+start = "id-1"
+activeNode = 0
+listItemClasses = "item"
+primaryClasses = "nav nav-pills"
+secondaryClasses = "dropdown-menu"
+numberOfLevels = 2
+==
+<!doctype html>
+<html lang="{{ localePicker.activeLocale }}">
+<head>
+    {% partial 'meta' %}
+</head>
+<body>
+
+{% partial 'slideNav' %}
+
+<div class="site-wrapper">
+
+    {% partial 'topbar' %}
+    {% partial 'header' %}
+    {% partial 'navigation' %}
+
+    <main class="main">
+        <div class="wrapper">
+            <section class="content">
+                {% page %}
+            </section>
+        </div>
+    </main>
+
+    {% partial 'footer' %}
+</div>
+
+{% partial 'flash' %}
+{% partial 'scripts' %}
+</body>
+</html>

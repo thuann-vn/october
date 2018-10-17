@@ -1,9 +1,15 @@
 title = "Plugin components"
 url = "/demo/plugins"
 layout = "default"
+is_hidden = 0
 
 [demoTodo]
 max = 3
+
+[ProductList]
+sorting = "no"
+
+[Cart]
 ==
 <div class="jumbotron title-js">
     <div class="container">
@@ -18,6 +24,10 @@ max = 3
 
 <div class="container">
     {% component 'demoTodo' %}
+    {% component 'ProductList' %}
+    {% component 'Cart' %}
+    
+    
 </div>
 
 <!-- Page Explanation -->
